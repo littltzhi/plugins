@@ -9,7 +9,7 @@ Agnes 在 registry 里有两个入口，都保留（[#614](https://github.com/ma
 | | 本包（`agnes-code`） | [agnes](../agnes)（`agnes`） |
 | --- | --- | --- |
 | 登录 | 读 Agnes **Code 桌面端**已保存的会话（Windows，DPAPI + safeStorage），或粘贴 `accessToken` | 在 Chrome 里登录 Agnes AI 国际版网页（agnes-ai.com），不需要桌面端 |
-| 服务 | Agnes Code 编码产品：`api-agnes-code.agnes-ai.com/v1`（chat completions，编码模型目录） | Agnes AI 国际版的文本模型、Token/Agent Plan 用量与美元余额 |
+| 服务 | Agnes Code 编码产品：`api-agnes-code-test.agnes-dev.com/v1`（chat completions，编码模型目录） | Agnes AI 国际版的文本模型、Token/Agent Plan 用量与美元余额 |
 | 每日额度 | 本产品的每日积分（`api/v2/subscription/credits-balance`） | 该产品自己的套餐与余额读数 |
 | 平台 | 桌面端解密仅 Windows，其余平台走粘贴 | 有 Chrome 即可 |
 
@@ -62,8 +62,8 @@ products: neither entry replaces the other.
 
 ## 协议与上游
 
-- 模型调用：`POST https://api-agnes-code.agnes-ai.com/v1/chat/completions`（OpenAI chat 协议，`Authorization: Bearer <accessToken>`，思考在 `reasoning_content`）。
-- 模型目录：`GET https://api-agnes-code.agnes-ai.com/v1/models`。
+- 模型调用：`POST https://api-agnes-code-test.agnes-dev.com/v1/chat/completions`（OpenAI chat 协议，`Authorization: Bearer <accessToken>`，思考在 `reasoning_content`）。
+- 模型目录：`GET https://api-agnes-code-test.agnes-dev.com/v1/models`。
 - 积分：`GET https://api.agnes-ai.com/api/v2/subscription/credits-balance`。
 
 ## 风险提示

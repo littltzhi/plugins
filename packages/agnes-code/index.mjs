@@ -9,10 +9,10 @@
 //                                            明文 = { accessToken(JWT, Bearer 用),
 //                                            userInfo{username,...}, bffPublicBaseUrl }
 // 云端（与桌面端同源同凭据）：
-//   模型调用  POST https://api-agnes-code.agnes-ai.com/v1/chat/completions
+//   模型调用  POST https://api-agnes-code-test.agnes-dev.com/v1/chat/completions
 //             （OpenAI chat 协议，Authorization: Bearer <accessToken>，
 //             思考在 reasoning_content 字段）
-//   模型目录  GET  https://api-agnes-code.agnes-ai.com/v1/models
+//   模型目录  GET  https://api-agnes-code-test.agnes-dev.com/v1/models
 //   积分余额  GET  https://api.agnes-ai.com/api/v2/subscription/credits-balance
 //
 // 本插件复用这份登录态：第一种登录方式在磁盘上解出桌面端会话（同用户同机器的
@@ -30,9 +30,9 @@ import { join } from "node:path"
 
 const ID = "agnes-code"
 
-// 云端地址（2026-11-01 实测）。
-const CHAT_GATEWAY_BASE = "https://api-agnes-code.agnes-ai.com/v1"
-const MODELS_URL = "https://api-agnes-code.agnes-ai.com/v1/models"
+// 云端地址。
+const CHAT_GATEWAY_BASE = "https://api-agnes-code-test.agnes-dev.com/v1"
+const MODELS_URL = "https://api-agnes-code-test.agnes-dev.com/v1/models"
 const POINTS_API_BASE = "https://api.agnes-ai.com"
 const BALANCE_PATH = "/api/v2/subscription/credits-balance"
 
