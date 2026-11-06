@@ -13,7 +13,7 @@
 //             （OpenAI chat 协议，Authorization: Bearer <accessToken>，
 //             思考在 reasoning_content 字段）
 //   模型目录  GET  https://api-agnes-code-test.agnes-dev.com/v1/models
-//   积分余额  GET  https://api.agnes-ai.com/api/v2/subscription/credits-balance
+//   积分余额  GET  https://api-agnes-code-test.agnes-dev.com/api/v2/subscription/credits-balance
 //
 // 本插件复用这份登录态：第一种登录方式在磁盘上解出桌面端会话（同用户同机器的
 // DPAPI 即可解，无需密钥口令，仅 Windows；magpie 的 oauth 方式，没解到时给出
@@ -33,7 +33,7 @@ const ID = "agnes-code"
 // 云端地址。
 const CHAT_GATEWAY_BASE = "https://api-agnes-code-test.agnes-dev.com/v1"
 const MODELS_URL = "https://api-agnes-code-test.agnes-dev.com/v1/models"
-const POINTS_API_BASE = "https://api.agnes-ai.com"
+const POINTS_API_BASE = "https://api-agnes-code-test.agnes-dev.com"
 const BALANCE_PATH = "/api/v2/subscription/credits-balance"
 
 // 读取桌面端登录态失败时展示的跳转页：Agnes Code 官网页（含桌面端下载）。

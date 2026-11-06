@@ -467,7 +467,7 @@ const BALANCE = { total_balance: 600, time_sensitive_balance: 600, permanent_bal
 
 test("usage maps the balance into quota windows", async () => {
   const plugin = createPlugin({ fetchImpl: async (url) => {
-    assert.match(String(url), /credits-balance/)
+    assert.equal(String(url), "https://api-agnes-code-test.agnes-dev.com/api/v2/subscription/credits-balance")
     return jsonRes({ code: "000000", message: "success", data: BALANCE })
   } })
   const out = await plugin.auth.usage(async () => ({ type: "api", key: "k" }))

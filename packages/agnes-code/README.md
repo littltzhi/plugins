@@ -64,7 +64,7 @@ products: neither entry replaces the other.
 
 - 模型调用：`POST https://api-agnes-code-test.agnes-dev.com/v1/chat/completions`（OpenAI chat 协议，`Authorization: Bearer <accessToken>`，思考在 `reasoning_content`）。
 - 模型目录：`GET https://api-agnes-code-test.agnes-dev.com/v1/models`。
-- 积分：`GET https://api.agnes-ai.com/api/v2/subscription/credits-balance`。
+- 积分：`GET https://api-agnes-code-test.agnes-dev.com/api/v2/subscription/credits-balance`。
 
 ## 风险提示
 
